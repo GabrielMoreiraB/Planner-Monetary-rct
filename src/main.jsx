@@ -17,10 +17,14 @@ const router = createBrowserRouter([
       {path:'/results', element: <Results/>},
     ]
   }
-])
+]);
+
+import {CalcProvider} from './context/calcContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <CalcProvider>
+      <RouterProvider router={router}/>
+    </CalcProvider>
   </React.StrictMode>,
 )
