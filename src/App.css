@@ -1,42 +1,70 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App {
+  width: 70vw;
+  background: #2D2A37;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04), 0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26), 0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1), inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+  border-radius: 48px;
+  color: #EBEBEB;
+  padding: 3em;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.App img{
+  width: 100px;
+  display: inline;
 }
 
-.card {
-  padding: 2em;
+.show {
+  display: block;
 }
 
-.read-the-docs {
-  color: #888;
+.hide {
+  display: none;
+}
+
+
+button{
+  cursor: pointer;
+}
+
+.reload{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #462878;
+  ox-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+  border-radius: 999px; 
+  color: #EBEBEB;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 1em;
+}
+
+.btn{
+  padding: 5px 10px;
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #EBEBEB;
+  background-color: rgb(6, 166, 113);
+  border-radius: 5px;
+  transition: .5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: rgb(4, 114, 77);
+}
+
+.navbar{
+  list-style: none;
 }
