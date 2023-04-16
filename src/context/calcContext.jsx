@@ -6,6 +6,7 @@ const CalcProvider = ({children})=> {
 
     const [cash, setCash] = useState();
     const [percent, setpercent] = useState();
+    const [other, setOther] = useState(false);
     const [percentOther, setpercentOther] = useState();
 
     const [day, setDay] = useState();
@@ -21,6 +22,8 @@ const CalcProvider = ({children})=> {
         setCash, 
         percent, 
         setpercent, 
+        other,
+        setOther,
         percentOther, 
         setpercentOther, 
         day, 

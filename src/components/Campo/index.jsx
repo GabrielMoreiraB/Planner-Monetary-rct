@@ -1,14 +1,18 @@
 import './Campo.css';
 
 
-const Campo = ({name, label, register}) => {
+const Campo = ({name, label, min, max, change}) => {
     return ( 
         <div className='campo'>
             <label htmlFor={name}>{label}</label>
             <input 
-            {...register(`${name}`)}
+            name='name'
             type="number" 
-            required='true'  />
+            required={true}
+            min={min}
+            max={max}
+            onChange={change}
+            />
         </div>
      );
 }
