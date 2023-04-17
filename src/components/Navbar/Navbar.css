@@ -4,6 +4,16 @@
     justify-content: space-around;
     font-size: 1.5em;
     margin-top: 0;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     
+}
+
+.navbar ul li{
+    padding: .3em .5em ;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.navbar ul li:hover{
+    background:#54545484;
 }

@@ -4,6 +4,8 @@ import { CalcContext } from "../context/calcContext";
 import {useForm} from 'react-hook-form'
 import Campo from "../components/Campo";
 import Button from "../components/button";
+import Select from "../components/Select";
+import{ Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -14,8 +16,6 @@ const Home = () => {
         setpercent,
         other,
         setOther, 
-        percentOther, 
-        setpercentOther, 
         day, 
         setDay, 
         lastDay, 
@@ -25,33 +25,34 @@ const Home = () => {
         spend, 
         setSpend } = useContext(CalcContext);
 
-        const send = ()=> {
-            console.log();
-        }
-        console.log(cash, percent)
+        
+        //console.log(cash, percent)
   return (
   <section>
-    <form 
     
+    <h1>Planner Monetary 💰</h1>
+    <form 
     >
       <Campo
       nome='cash'
-      label='Qual o valor de entrada?'
+      label='Qual o valor de entrada? (em R$)'
       min='1'
       change={(event)=> {
         setCash(event.target.value)}}
       />
+      {cash<0 && <span>O valor deve ser maior que 0</span>}
+      
       <h2>Qual Porcentagem desse valor você pretende guardar? </h2>
       <div className="container-button">
       {porcentagem.map(item =>{
-        setOther(false)
         return (
           <Button
         key={item}
         name={item}
         value={item}
         change ={(event)=> {
-          setpercent(event.target.value)
+          setOther(false)
+          setpercent(parseInt(event.target.value))
         }} 
         />
         )
@@ -68,12 +69,32 @@ const Home = () => {
         />
         {other && <Campo
             nome='percentOther'
-            label='Escolha um outro para guardar (em %)'
+            label='Escolha um outro para guardar (em %): '
             min='1'
             max='100'
             change={(event)=> {
-              setpercentOther(event.target.value)}}
-      />}
+              setpercent(parseInt(event.target.value))
+            }}
+          />}
+      <h2>Quanto tempo temos? </h2>
+      <div className="time">
+      <Campo
+      nome='day'
+      label='Dia Atual'
+      min='1'
+      max='31'
+      change={(event)=> {
+        setDay(event.target.value)}}
+      />
+      <Select
+      nome='lastDay'
+      label='Ultimo dia do mês : '
+      change={(event)=> {
+        setLastDay(event.target.value)}}
+      />
+      </div>
+      {(day < 1 || day > 31) && <span>Favor inserir uma data correta</span>}
+      <Link to='/results'>Veja o quanto economizar aqui aqui!</Link>
     </form>
   </section>
   );

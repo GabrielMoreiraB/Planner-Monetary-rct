@@ -48,9 +48,9 @@ button{
   padding: 1em;
 }
 
-.btn{
+.button{
   padding: 5px 10px;
-  margin-top: 1em;
+  margin: 1em 0.5em;
   font-size: 1.5em;
   font-weight: 700;
   color: #EBEBEB;
@@ -61,10 +61,18 @@ button{
   cursor: pointer;
 }
 
-.btn:hover{
+.button:hover{
   background-color: rgb(4, 114, 77);
 }
 
 .navbar{
   list-style: none;
+}
+
+.time{
+  display: flex;
+}
+
+span {
+  color: red;
 }
