@@ -4,20 +4,10 @@ import { CalcContext } from "../context/calcContext";
 
 const Results = () => {
 
-    const {cash, 
-        setCash, 
+    const {cash,  
         percent, 
-        setpercent, 
-        percentOther, 
-        setpercentOther, 
-        day, 
-        setDay, 
-        lastDay, 
-        setLastDay, 
-        save, 
-        setSave, 
-        spend, 
-        setSpend } = useContext(CalcContext);
+        day,  
+        lastDay} = useContext(CalcContext);
 
         const result = cash*(percent/100);
         const time = (lastDay - day +1);

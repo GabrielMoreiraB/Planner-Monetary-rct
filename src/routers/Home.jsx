@@ -12,18 +12,12 @@ const Home = () => {
     const porcentagem = ['5%', '10%', '15%', '20%', '30%']
     const {cash, 
         setCash, 
-        percent, 
         setpercent,
         other,
         setOther, 
         day, 
         setDay, 
-        lastDay, 
-        setLastDay, 
-        save, 
-        setSave, 
-        spend, 
-        setSpend } = useContext(CalcContext);
+        setLastDay } = useContext(CalcContext);
 
         
         //console.log(cash, percent)

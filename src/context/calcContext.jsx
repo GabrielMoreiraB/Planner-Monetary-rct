@@ -10,8 +10,6 @@ const CalcProvider = ({children})=> {
 
     const [day, setDay] = useState();
     const [lastDay, setLastDay] = useState();
-    const [save, setSave] = useState();
-    const [spend, setSpend] =useState();
 
 
     let results = (cash*(percent/100))
@@ -32,10 +30,6 @@ const CalcProvider = ({children})=> {
         setDay, 
         lastDay, 
         setLastDay, 
-        save, 
-        setSave, 
-        spend, 
-        setSpend
         }}>
         {children}
       </CalcContext.Provider>  
